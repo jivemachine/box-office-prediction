@@ -33,7 +33,7 @@ def prep_runtime(df):
     return df 
 
 def prep_genres(df):
-    df.genres.dropna(inplace=True)
+    df.genres.fillna([{'id': 18, 'name': 'Drama'}])
     return df
 
 def prep_spoken(df):
